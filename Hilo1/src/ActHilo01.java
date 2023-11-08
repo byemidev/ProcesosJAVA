@@ -1,3 +1,11 @@
+
+/*
+* @Author Emilio Arevalo
+*Practica 01 - Hilos
+* Java OpenJDK 21.*
+* IDE Intellij IDEA
+*/
+
 import java.util.ArrayList;
 import java.util.List;
 
