@@ -7,7 +7,7 @@ En este proyecto podemos encontrar la estructura basica de un programa que usa u
 #### **Files**
 
 * *Actividad 01 de Hilos.* 
-+ [ActHilo01.java](Hilo1/src/ActHilo01.java) 
+- [ActHilo01.java](Hilo1/src/ActHilo01.java) 
 
 * *Emjemplos de hilos*
 + [MiHilo01.java](Hilo1/src/MiHilo01.java)
