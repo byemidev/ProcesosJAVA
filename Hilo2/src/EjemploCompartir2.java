@@ -26,7 +26,7 @@ class Dato1
         private String nombre;
         Hilo(String nombre, Dato1 dato)
         {
-            this.nombre=nombre;
+            this.nombre=nombre;s
             this.dato=dato;
         }
 
