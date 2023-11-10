@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/ProcesosJAVA.iml" filepath="$PROJECT_DIR$/.idea/ProcesosJAVA.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/Hilo1/Hilo1.iml" filepath="$PROJECT_DIR$/Hilo1/Hilo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hilos01/Hilos01.iml" filepath="$PROJECT_DIR$/Hilos01/Hilos01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Procesos.iml" filepath="$PROJECT_DIR$/.idea/Procesos.iml" />
+>>>>>>> 39db4887b8ef4cdfccfdf40c242a068821edd127
     </modules>
   </component>
 </project>

@@ -1,3 +1,4 @@
+//ejemplo clase hilos 2
 class MiHilo02 extends Thread{
     private String nombre;
     MiHilo02(String nombre){
