@@ -1,3 +1,14 @@
 public class Dato {
-    long tMinTotal = System.currentTimeMillis() / (3600 * 1000);
+    private bool estado = null; 
+    
+    public Dato(){
+        this.estado = false;
+    }
+    public bool getEstado(){
+        return this.estado; 
+    } 
+
+    public void setEstado(bool estado){
+        this.estado = estado; 
+    } 
 }
