@@ -1,13 +1,17 @@
 import java.util.Scanner;
 
-public class TemporizadorChungo {
+
+//TODO hacer una instancia de dato en los hilos,
+//  ya que segun el valor de true o false del dato se comportaran cada uno de una forma distinta
+public class TemporizadorChungo { //Aqui deberia haber un bucle finito hasta que el estado del dato sea true
     public static void main(String[] args) {
         Thread HiloPregunton  = new HiloPregunton();
         Thread HiloTemporizador = new HiloTemporizador();
 
         hiloTemporizador.start();
         if(!hiloTemporizador.interrupted()){
-
+            try{hiloTemporizador.sleep(30000);}
+            catch(){}
         }
 
     }
@@ -36,9 +40,14 @@ public class TemporizadorChungo {
 
         }
         public void run(){
+            int treinta = 30;
             while(true){//donde se deberia manejar las interrupciones
                 try {
                     Thread.sleep(1000);
+                    treinta--;
+                    if(treinta < 1 ){
+                        //Estado del dato = false
+                    }
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                     break;
@@ -48,11 +57,15 @@ public class TemporizadorChungo {
     }
 
     //pregunton
-    class HiloPregunton extends Thread{
-
+    class HiloPregunton extends Thread{ //deberia poder evaluar en algun lugar el estado del hilo.
+        static Boolean estado = false;
+        private Dato dato;
         public void run(){//solo se deberia ejecutar durante los 30 segundos de espera del hilo temporizador.
             System.out.println("soy el hilo pregunton");
+
+            //Scanner y estado
             Scanner sc = new Scanner(System.in);
+
             System.out.println("Dime quien cuantos balones de oro ha ganado Messi");
             char [] balones = {'1', '2', '3', '4', '5', '6', '7', '8'};
             for(char b : balones){
@@ -64,6 +77,7 @@ public class TemporizadorChungo {
                 System.out.println("no has acertado");
             }else {
                 System.out.println("has acertado");
+                estado = true;
             }
 
         }
