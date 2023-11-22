@@ -1,8 +1,5 @@
 package cocina;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 
 public class Menu {
@@ -43,6 +40,23 @@ public class Menu {
         return pAleatorios;
 
     } 
+    //Devolver platos con el precio de forma aleatoria
+    public HashMap<String, Double> getPlatosConPrecio(){
+        HashMap<String, Double> platoConPrecio = new HashMap<>();
+        //sacar los platos del hashmap del menu
 
-    
+            List<String> lsPlatos = new ArrayList<>(platos.keySet());
+            int cantidadPlatosTotales = platos.size();
+            for(int i = 0; i < cantidadPlatosTotales; i++){
+                String platoSinprecio = lsPlatos.get(i);
+                platoConPrecio.put(platoSinprecio, getPrecioAleatorio());
+            }
+        return platoConPrecio;
+    }
+    //dar un precio aleatorio entre 1 y 15
+    private Double getPrecioAleatorio (){
+        return (Math.random() * 15 ) + 1;
+    }
+
+
 }

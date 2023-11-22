@@ -1,10 +1,12 @@
 package cocina;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Cocinero extends Thread{
     public HashMap<String, Integer> platosAsignados;
+
     Cocinero(HashMap<String, Integer> platos)
     {
         this.platosAsignados= platos;

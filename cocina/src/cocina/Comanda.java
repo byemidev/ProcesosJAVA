@@ -10,7 +10,7 @@ public class Comanda extends Thread{
         while(!Thread.interrupted())
         {
            menu=new Menu();
-           cocina=new Cocina(menu.platosAleatorios(), ); //deberia retornar el metodo la lista de los cocineros con los pedidos
+           cocina=new Cocina(menu.platosAleatorios()); //deberia retornar el metodo la lista de los cocineros con los pedidos
             cocina.start();
             //esperamos a que termine de prepara los platos
             try {
